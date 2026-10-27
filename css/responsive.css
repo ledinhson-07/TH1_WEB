@@ -1,0 +1,262 @@
+/* ==========================================================================
+   SQUISHY WORLD - RESPONSIVE STYLESHEET
+   Đảm bảo website hiển thị hoàn hảo trên Desktop, Laptop, Tablet và Mobile.
+   ========================================================================== */
+
+/* 1. MOBILE MENU OVERLAY & WRAPPER (Tương tự Ogani Humberger Menu) */
+.humberger__menu__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(73, 59, 67, 0.6);
+  z-index: 10001;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.humberger__menu__overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.humberger__menu__wrapper {
+  position: fixed;
+  left: -320px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: var(--color-white);
+  padding: 30px 25px;
+  z-index: 10002;
+  overflow-y: auto;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.humberger__menu__wrapper.active {
+  left: 0;
+}
+
+.humberger__menu__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--color-text-brown);
+  cursor: pointer;
+}
+
+.humberger__menu__logo {
+  margin-bottom: 25px;
+}
+
+.humberger__menu__logo img {
+  height: 42px;
+}
+
+.humberger__menu__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.humberger__menu__nav li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-brown);
+  display: block;
+  padding: 6px 0;
+}
+
+.humberger__menu__nav li.active a,
+.humberger__menu__nav li a:hover {
+  color: var(--color-pink-deep);
+}
+
+.humberger__menu__contact {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-gray-border);
+  padding-top: 20px;
+}
+
+.humberger__menu__contact li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 2. MEDIA QUERIES */
+
+/* Large Tablets & Medium Desktops (Max 991px) */
+@media (max-width: 991px) {
+  .header__menu {
+    display: none;
+  }
+
+  .humberger__open {
+    display: block;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__categories ul {
+    display: none; /* Collapsed by default on tablet/mobile */
+  }
+
+  .hero__categories.open ul {
+    display: block;
+  }
+
+  .hero__item {
+    padding: 30px 25px;
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+
+  .hero__image-wrapper {
+    max-width: 100%;
+  }
+
+  .hero__image-wrapper img {
+    max-height: 220px;
+  }
+
+  .product__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .latest-product__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .from-blog .blog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product__details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices (Max 767px) */
+@media (max-width: 767px) {
+  .header__top-left {
+    display: none;
+  }
+
+  .header__top-inner {
+    justify-content: center;
+  }
+
+  .hero__search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__search-categories {
+    display: none;
+  }
+
+  .hero__search-phone {
+    justify-content: center;
+  }
+
+  .banner__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart__summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cart__actions a,
+  .cart__actions button {
+    text-align: center;
+  }
+
+  .contact__form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .hero__text h2 {
+    font-size: 28px;
+  }
+
+  .product__details-pic-item {
+    height: 300px;
+  }
+}
+
+/* Small Phones (Max 480px) */
+@media (max-width: 480px) {
+  .product__grid,
+  .shop-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header__cart-price {
+    display: none;
+  }
+
+  .shop__filter-bar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}

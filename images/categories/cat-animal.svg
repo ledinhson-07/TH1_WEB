@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <defs>
+    <linearGradient id="gradPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5" />
+      <stop offset="100%" stop-color="#F8C8DC" />
+    </linearGradient>
+    <linearGradient id="gradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E8FF" />
+      <stop offset="100%" stop-color="#DCCBFA" />
+    </linearGradient>
+    <linearGradient id="gradPeach" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F2" />
+      <stop offset="100%" stop-color="#FFE0D0" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#493B43" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFF8F2" rx="16"/>
+  
+  <g transform="translate(100, 90)" filter="url(#softShadow)">
+    <!-- ears -->
+    <polygon points="35,60 15,10 65,35" fill="#FFFFFF" stroke="#F8C8DC" stroke-width="6"/>
+    <polygon points="35,55 22,20 55,38" fill="#F8C8DC"/>
+    <polygon points="165,60 185,10 135,35" fill="#FFFFFF" stroke="#F8C8DC" stroke-width="6"/>
+    <polygon points="165,55 178,20 145,38" fill="#F8C8DC"/>
+    <!-- head -->
+    <ellipse cx="100" cy="120" rx="90" ry="75" fill="#FFFFFF" stroke="#F5F5F5" stroke-width="4"/>
+    <!-- face -->
+    <circle cx="65" cy="115" r="7" fill="#493B43"/>
+    <circle cx="135" cy="115" r="7" fill="#493B43"/>
+    <circle cx="50" cy="125" r="10" fill="#F8C8DC" opacity="0.8"/>
+    <circle cx="150" cy="125" r="10" fill="#F8C8DC" opacity="0.8"/>
+    <polygon points="100,123 95,118 105,118" fill="#F06292"/>
+    <path d="M 95,125 Q 100,132 105,125" stroke="#493B43" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- whiskers -->
+    <line x1="30" y1="115" x2="10" y2="110" stroke="#493B43" stroke-width="2"/>
+    <line x1="30" y1="125" x2="10" y2="130" stroke="#493B43" stroke-width="2"/>
+    <line x1="170" y1="115" x2="190" y2="110" stroke="#493B43" stroke-width="2"/>
+    <line x1="170" y1="125" x2="190" y2="130" stroke="#493B43" stroke-width="2"/>
+  </g>
+
+</svg>

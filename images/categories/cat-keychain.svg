@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <defs>
+    <linearGradient id="gradPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5" />
+      <stop offset="100%" stop-color="#F8C8DC" />
+    </linearGradient>
+    <linearGradient id="gradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E8FF" />
+      <stop offset="100%" stop-color="#DCCBFA" />
+    </linearGradient>
+    <linearGradient id="gradPeach" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F2" />
+      <stop offset="100%" stop-color="#FFE0D0" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#493B43" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFF8F2" rx="16"/>
+  
+  <g transform="translate(100, 60)" filter="url(#softShadow)">
+    <!-- key ring chain -->
+    <circle cx="100" cy="25" r="16" fill="none" stroke="#94A3B8" stroke-width="5"/>
+    <line x1="100" y1="41" x2="100" y2="70" stroke="#94A3B8" stroke-width="5"/>
+    <!-- bear cookie -->
+    <circle cx="55" cy="85" r="22" fill="#D97706"/>
+    <circle cx="145" cy="85" r="22" fill="#D97706"/>
+    <circle cx="100" cy="140" r="65" fill="#F59E0B"/>
+    <!-- scalloped cookie edge detail -->
+    <circle cx="100" cy="140" r="55" fill="#FCD34D"/>
+    <!-- eyes and mouth -->
+    <circle cx="80" cy="130" r="5" fill="#493B43"/>
+    <circle cx="120" cy="130" r="5" fill="#493B43"/>
+    <ellipse cx="100" cy="145" rx="8" ry="6" fill="#D97706"/>
+    <path d="M 96,152 Q 100,156 104,152" stroke="#493B43" stroke-width="2.5" fill="none"/>
+  </g>
+
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <defs>
+    <linearGradient id="gradPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5" />
+      <stop offset="100%" stop-color="#F8C8DC" />
+    </linearGradient>
+    <linearGradient id="gradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E8FF" />
+      <stop offset="100%" stop-color="#DCCBFA" />
+    </linearGradient>
+    <linearGradient id="gradPeach" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F2" />
+      <stop offset="100%" stop-color="#FFE0D0" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#493B43" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFF8F2" rx="16"/>
+  
+  <g transform="translate(100, 70)" filter="url(#softShadow)">
+    <path d="M 100,210 C 20,160 20,70 60,40 C 90,20 110,20 140,40 C 180,70 180,160 100,210 Z" fill="#F06292"/>
+    <!-- leaves -->
+    <path d="M 100,35 C 70,10 50,25 70,40 Z" fill="#4ADE80"/>
+    <path d="M 100,35 C 130,10 150,25 130,40 Z" fill="#4ADE80"/>
+    <path d="M 100,35 C 100,5 110,5 100,35 Z" fill="#22C55E"/>
+    <!-- seeds -->
+    <circle cx="65" cy="80" r="4" fill="#FFE4E6"/>
+    <circle cx="135" cy="80" r="4" fill="#FFE4E6"/>
+    <circle cx="100" cy="95" r="4" fill="#FFE4E6"/>
+    <circle cx="75" cy="130" r="4" fill="#FFE4E6"/>
+    <circle cx="125" cy="130" r="4" fill="#FFE4E6"/>
+    <circle cx="100" cy="165" r="4" fill="#FFE4E6"/>
+    <!-- cute face -->
+    <circle cx="85" cy="110" r="5" fill="#493B43"/>
+    <circle cx="115" cy="110" r="5" fill="#493B43"/>
+    <path d="M 96,118 Q 100,123 104,118" stroke="#493B43" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+</svg>

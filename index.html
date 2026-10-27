@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squishy World - Cửa Hàng Đồ Chơi Squishy Dễ Thương & Ngọt Ngào</title>
+  <!-- Google Font: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== MOBILE MENU (Humberger) ==================== -->
+  <div class="humberger__menu__overlay"></div>
+  <div class="humberger__menu__wrapper">
+    <div class="humberger__menu__close">
+      <i class="fa fa-times"></i>
+    </div>
+    <div class="humberger__menu__logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Squishy World Logo">
+      </a>
+    </div>
+    <nav class="humberger__menu__nav">
+      <ul>
+        <li class="active"><a href="index.html">Trang Chủ</a></li>
+        <li><a href="shop.html">Cửa Hàng Squishy</a></li>
+        <li><a href="shop.html?filter=hot">Bộ Sưu Tập</a></li>
+        <li><a href="blog.html">Tin Tức</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+      </ul>
+    </nav>
+    <div class="humberger__menu__contact">
+      <ul>
+        <li><i class="fa fa-envelope"></i> contact@squishyworld.vn</li>
+        <li><i class="fa fa-phone"></i> Hotline: 0988 123 456</li>
+        <li><i class="fa fa-map-marker"></i> TP. Hồ Chí Minh</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header class="header">
+    <!-- Top Bar -->
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <div class="header__top-left">
+            <span><i class="fa fa-envelope"></i> contact@squishyworld.vn</span>
+            <span><i class="fa fa-truck"></i> Giao hàng tận nơi toàn quốc (Mô phỏng đồ án)</span>
+          </div>
+          <div class="header__top-right">
+            <div class="header__top-social">
+              <a href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="javascript:void(0)" title="Instagram"><i class="fa fa-instagram"></i></a>
+              <a href="javascript:void(0)" title="Pinterest"><i class="fa fa-pinterest-p"></i></a>
+            </div>
+            <div class="header__top-auth">
+              <i class="fa fa-user"></i>
+              <span>Tài khoản (Demo)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <div class="container">
+      <div class="header__inner">
+        <!-- Logo -->
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Squishy World Logo">
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="header__menu">
+          <ul>
+            <li class="active"><a href="index.html">Trang Chủ</a></li>
+            <li><a href="shop.html">Cửa Hàng Squishy</a></li>
+            <li><a href="shop.html?category=banh-ngot">Bánh Ngọt</a></li>
+            <li><a href="shop.html?category=dong-vat">Động Vật</a></li>
+            <li><a href="blog.html">Tin Tức</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+        </nav>
+
+        <!-- Cart & Wishlist Actions -->
+        <div class="header__cart">
+          <ul>
+            <li>
+              <a href="shop.html?filter=wishlist" title="Danh sách yêu thích">
+                <i class="fa fa-heart"></i>
+                <span class="badge" id="wishlist-badge">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="shopping-cart.html" title="Giỏ hàng của bạn">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="badge" id="cart-badge">0</span>
+              </a>
+            </li>
+          </ul>
+          <div class="header__cart-price">
+            Tổng: <span id="cart-header-price">0đ</span>
+          </div>
+        </div>
+
+        <!-- Humberger Icon (Mobile) -->
+        <div class="humberger__open">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <!-- Left: Categories Dropdown -->
+        <div class="hero__categories">
+          <div class="hero__categories-all">
+            <span><i class="fa fa-bars"></i> Danh Mục Squishy</span>
+            <i class="fa fa-angle-down"></i>
+          </div>
+          <ul id="hero-category-list">
+            <li><a href="shop.html?category=banh-ngot">Squishy Bánh Ngọt <span class="count">3</span></a></li>
+            <li><a href="shop.html?category=dong-vat">Squishy Động Vật <span class="count">4</span></a></li>
+            <li><a href="shop.html?category=trai-cay">Squishy Trái Cây <span class="count">3</span></a></li>
+            <li><a href="shop.html?category=do-an">Squishy Đồ Ăn Mini <span class="count">2</span></a></li>
+            <li><a href="shop.html?category=cham-no">Squishy Chậm Nở <span class="count">2</span></a></li>
+            <li><a href="shop.html?category=moc-khoa">Squishy Móc Khóa <span class="count">1</span></a></li>
+            <li><a href="shop.html?category=hop-qua">Hộp Quà Squishy <span class="count">1</span></a></li>
+            <li><a href="shop.html?category=khac">Squishy Khác <span class="count">5</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Right: Search Bar & Hero Banner -->
+        <div class="hero__right">
+          <div class="hero__search">
+            <form class="hero__search-form" action="shop.html" method="GET">
+              <div class="hero__search-categories">
+                <select name="category">
+                  <option value="all">Tất cả danh mục</option>
+                  <option value="banh-ngot">Bánh Ngọt</option>
+                  <option value="dong-vat">Động Vật</option>
+                  <option value="trai-cay">Trái Cây</option>
+                  <option value="do-an">Đồ Ăn</option>
+                  <option value="cham-no">Chậm Nở</option>
+                  <option value="khac">Squishy Khác</option>
+                </select>
+              </div>
+              <input type="text" name="search" placeholder="Bạn muốn tìm Squishy gì hôm nay?...">
+              <button type="submit"><i class="fa fa-search"></i> TÌM KIẾM</button>
+            </form>
+
+            <div class="hero__search-phone">
+              <div class="hero__search-phone-icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="hero__search-phone-text">
+                <h5>0988 123 456</h5>
+                <span>Hỗ trợ tư vấn 24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Main Banner -->
+          <div class="hero__item">
+            <div class="hero__text">
+              <span class="tagline">BỘ SƯU TẬP MÙA THU 2026</span>
+              <h2>Thế Giới Squishy <span>Mềm Mại & Đáng Yêu</span></h2>
+              <p>Trải nghiệm cảm giác bóp nén xả stress cực êm ái với hơn 100+ mẫu Squishy chậm nở thơm ngát hương hoa quả tự nhiên.</p>
+              <a href="shop.html" class="primary-btn">
+                <span>KHÁM PHÁ NGAY</span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="hero__image-wrapper">
+              <img src="images/banners/hero-banner.svg" alt="Squishy World Hero Banner">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CATEGORIES SECTION ==================== -->
+  <section class="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2>Danh Mục Nổi Bật</h2>
+        <p>Lựa chọn bộ sưu tập Squishy theo sở thích của riêng bạn</p>
+      </div>
+      <div class="categories__grid">
+        <a href="shop.html?category=banh-ngot" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-001.webp" alt="Bánh Ngọt">
+          </div>
+          <h5>Bánh Ngọt</h5>
+          <span>3 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=dong-vat" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-004.png" alt="Động Vật">
+          </div>
+          <h5>Động Vật</h5>
+          <span>4 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=trai-cay" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-008.png" alt="Trái Cây">
+          </div>
+          <h5>Trái Cây</h5>
+          <span>3 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=do-an" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-011.png" alt="Đồ Ăn">
+          </div>
+          <h5>Đồ Ăn</h5>
+          <span>2 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=cham-no" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-012.png" alt="Chậm Nở">
+          </div>
+          <h5>Chậm Nở</h5>
+          <span>2 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=moc-khoa" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-013.png" alt="Móc Khóa">
+          </div>
+          <h5>Móc Khóa</h5>
+          <span>1 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=hop-qua" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-016.png" alt="Hộp Quà">
+          </div>
+          <h5>Hộp Quà</h5>
+          <span>1 Sản phẩm</span>
+        </a>
+        <a href="shop.html?category=khac" class="categories__item">
+          <div class="categories__item-pic">
+            <img src="images/squishy/squishy-017.png" alt="Khác">
+          </div>
+          <h5>Khác</h5>
+          <span>5 Sản phẩm</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED PRODUCTS ==================== -->
+  <section class="featured spad">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <p>Những mẫu Squishy xinh xắn được yêu thích nhất tại cửa hàng</p>
+      </div>
+
+      <!-- Category Filter Tabs (Organi Style) -->
+      <div class="featured__controls">
+        <ul id="featured-filter-tabs">
+          <li class="active" data-filter="all">Tất Cả</li>
+          <li data-filter="banh-ngot">Bánh Ngọt</li>
+          <li data-filter="dong-vat">Động Vật</li>
+          <li data-filter="trai-cay">Trái Cây</li>
+          <li data-filter="cham-no">Chậm Nở</li>
+          <li data-filter="khac">Khác</li>
+        </ul>
+      </div>
+
+      <!-- Featured Product Grid -->
+      <div class="product__grid" id="featured-product-grid">
+        <!-- Javascript renders 8 featured products dynamically here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROMO BANNERS ==================== -->
+  <div class="banner">
+    <div class="container">
+      <div class="banner__grid">
+        <div class="banner__item">
+          <a href="shop.html?category=banh-ngot">
+            <img src="images/banners/banner-1.svg" alt="Khuyến mãi Squishy Bánh Ngọt">
+          </a>
+        </div>
+        <div class="banner__item">
+          <a href="shop.html?category=dong-vat">
+            <img src="images/banners/banner-2.svg" alt="Bộ sưu tập Squishy Động Vật">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 3-COLUMN LATEST PRODUCT (Organi Layout) ==================== -->
+  <section class="latest-product spad">
+    <div class="container">
+      <div class="latest-product__grid">
+        <!-- Column 1: Mới nhất -->
+        <div class="latest-product__column">
+          <h4>Squishy Mới Nhất</h4>
+          <div class="latest-product__list" id="latest-column-new">
+            <!-- Render 3 new products -->
+          </div>
+        </div>
+
+        <!-- Column 2: Bán chạy nhất -->
+        <div class="latest-product__column">
+          <h4>Bán Chạy Nhất</h4>
+          <div class="latest-product__list" id="latest-column-bestseller">
+            <!-- Render 3 best seller products -->
+          </div>
+        </div>
+
+        <!-- Column 3: Chậm nở tuyển chọn -->
+        <div class="latest-product__column">
+          <h4>Chậm Nở Tuyển Chọn</h4>
+          <div class="latest-product__list" id="latest-column-slow">
+            <!-- Render 3 slow rising products -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LATEST BLOG / TIN TỨC ==================== -->
+  <section class="from-blog spad">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tin Tức & Mẹo Hay</h2>
+        <p>Cập nhật cẩm nang bảo quản và cách chơi Squishy đúng chuẩn</p>
+      </div>
+      <div class="blog__grid" id="home-blog-grid">
+        <!-- Render 3 blog items dynamically from SQUISHY_DATA -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- About -->
+        <div class="footer__about">
+          <div class="footer__about-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Squishy World Logo">
+            </a>
+          </div>
+          <p>Squishy World mang đến cho bạn thế giới đồ chơi Squishy xốp mềm ngọt ngào, chất lượng cao cấp, an toàn và giúp giải tỏa căng thẳng sau những giờ học tập mệt mỏi.</p>
+          <ul>
+            <li><i class="fa fa-map-marker"></i> Địa chỉ: Khu Đô Thị Đại Học, TP. Hồ Chí Minh</li>
+            <li><i class="fa fa-phone"></i> Điện thoại: 0988 123 456</li>
+            <li><i class="fa fa-envelope"></i> Email: contact@squishyworld.vn</li>
+          </ul>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer__widget">
+          <h6>Liên Kết Nhanh</h6>
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="shop.html">Cửa Hàng Squishy</a></li>
+            <li><a href="shopping-cart.html">Giỏ Hàng Của Bạn</a></li>
+            <li><a href="checkout.html">Thanh Toán (Demo)</a></li>
+            <li><a href="blog.html">Cẩm Nang Squishy</a></li>
+            <li><a href="contact.html">Liên Hệ Hỗ Trợ</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer__widget">
+          <h6>Danh Mục Squishy</h6>
+          <ul>
+            <li><a href="shop.html?category=banh-ngot">Squishy Bánh Ngọt</a></li>
+            <li><a href="shop.html?category=dong-vat">Squishy Động Vật</a></li>
+            <li><a href="shop.html?category=trai-cay">Squishy Trái Cây</a></li>
+            <li><a href="shop.html?category=do-an">Squishy Đồ Ăn Mini</a></li>
+            <li><a href="shop.html?category=cham-no">Squishy Chậm Nở</a></li>
+            <li><a href="shop.html?category=hop-qua">Hộp Quà Cao Cấp</a></li>
+            <li><a href="shop.html?category=khac">Squishy Khác</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter & Social -->
+        <div class="footer__widget footer__newsletter">
+          <h6>Đăng Ký Nhận Tin</h6>
+          <p>Nhận ngay thông báo khi có các mẫu Squishy mới về hoặc mã ưu đãi đặc biệt.</p>
+          <form class="footer__newsletter-form" onsubmit="event.preventDefault(); showToast('Đăng ký thành công', 'Cảm ơn bạn đã theo dõi Squishy World!', 'success'); this.reset();">
+            <input type="email" placeholder="Nhập email của bạn..." required>
+            <button type="submit">GỬI</button>
+          </form>
+          <div class="footer__social">
+            <a href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="javascript:void(0)" title="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="javascript:void(0)" title="Pinterest"><i class="fa fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 <strong>Squishy World</strong>. Bố cục tham khảo thiết kế từ mẫu giao diện Organi (Ogani Template).</p>
+        <span class="disclaimer">Website được xây dựng phục vụ đồ án môn Thiết kế Web - Dữ liệu giá bán, đánh giá và giao dịch trên website hoàn toàn là mô phỏng.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Xử lý riêng cho Trang Chủ
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render Featured Products
+      const featuredContainer = document.getElementById('featured-product-grid');
+      const tabs = document.querySelectorAll('#featured-filter-tabs li');
+
+      function renderFeaturedProducts(categoryFilter = 'all') {
+        if (!featuredContainer) return;
+        featuredContainer.innerHTML = '';
+
+        let list = SQUISHY_DATA.products;
+        if (categoryFilter !== 'all') {
+          list = list.filter(p => p.category === categoryFilter);
+        }
+
+        // Lấy tối đa 8 sản phẩm cho trang chủ
+        const displayList = list.slice(0, 8);
+
+        displayList.forEach(product => {
+          let badgeHtml = '';
+          if (product.isNew) {
+            badgeHtml = '<span class="product__badge badge-new">Mới</span>';
+          } else if (product.isBestSeller) {
+            badgeHtml = '<span class="product__badge badge-bestseller">Hot</span>';
+          }
+
+          const isFav = WishlistManager.isWishlisted(product.id);
+
+          const card = document.createElement('div');
+          card.className = 'product__item';
+          card.innerHTML = `
+            ${badgeHtml}
+            <div class="product__item-pic">
+              <img src="${product.image}" alt="${product.name}">
+              <ul class="product__item-pic-hover">
+                <li>
+                  <button class="btn-wishlist-toggle ${isFav ? 'is-favorite' : ''}" data-product-id="${product.id}" title="Yêu thích">
+                    <i class="fa ${isFav ? 'fa-heart' : 'fa-heart-o'}"></i>
+                  </button>
+                </li>
+                <li>
+                  <a href="shop-details.html?id=${product.id}" title="Xem chi tiết">
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </li>
+                <li>
+                  <button class="btn-add-cart" data-product-id="${product.id}" title="Thêm vào giỏ hàng">
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="product__item-text">
+              <span class="category">${product.categoryName}</span>
+              <h6><a href="shop-details.html?id=${product.id}">${product.name}</a></h6>
+              <div class="product__item-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <span class="review-count">(${product.reviewCount})</span>
+              </div>
+              <div class="product__item-price">
+                ${formatPrice(product.price)}
+                ${product.oldPrice ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>` : ''}
+              </div>
+            </div>
+          `;
+          featuredContainer.appendChild(card);
+        });
+
+        // Gắn sự kiện Thêm giỏ hàng & Yêu thích
+        bindProductCardEvents();
+      }
+
+      function bindProductCardEvents() {
+        document.querySelectorAll('.btn-add-cart').forEach(btn => {
+          btn.onclick = () => {
+            const pid = btn.dataset.productId;
+            CartManager.addToCart(pid, 1);
+          };
+        });
+
+        document.querySelectorAll('.btn-wishlist-toggle').forEach(btn => {
+          btn.onclick = () => {
+            const pid = btn.dataset.productId;
+            WishlistManager.toggleWishlist(pid);
+          };
+        });
+      }
+
+      // Xử lý Tab click
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          renderFeaturedProducts(tab.dataset.filter);
+        });
+      });
+
+      renderFeaturedProducts('all');
+
+      // 2. Render 3 cột Latest Products (Organi Style)
+      function renderMiniColumn(containerId, productList) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+
+        productList.slice(0, 3).forEach(p => {
+          const item = document.createElement('a');
+          item.href = `shop-details.html?id=${p.id}`;
+          item.className = 'latest-product__item';
+          item.innerHTML = `
+            <div class="latest-product__item-pic">
+              <img src="${p.image}" alt="${p.name}">
+            </div>
+            <div class="latest-product__item-text">
+              <h6>${p.name}</h6>
+              <span>${formatPrice(p.price)}</span>
+            </div>
+          `;
+          container.appendChild(item);
+        });
+      }
+
+      const newProducts = SQUISHY_DATA.products.filter(p => p.isNew);
+      const bestSellers = SQUISHY_DATA.products.filter(p => p.isBestSeller);
+      const slowRising = SQUISHY_DATA.products.filter(p => p.category === 'cham-no' || p.category === 'dong-vat');
+
+      renderMiniColumn('latest-column-new', newProducts);
+      renderMiniColumn('latest-column-bestseller', bestSellers);
+      renderMiniColumn('latest-column-slow', slowRising);
+
+      // 3. Render 3 bài Blog
+      const blogContainer = document.getElementById('home-blog-grid');
+      if (blogContainer) {
+        blogContainer.innerHTML = '';
+        SQUISHY_DATA.blogs.slice(0, 3).forEach(b => {
+          const card = document.createElement('div');
+          card.className = 'blog__item';
+          card.innerHTML = `
+            <div class="blog__item-pic">
+              <img src="${b.image}" alt="${b.title}">
+            </div>
+            <div class="blog__item-text">
+              <div class="blog__item-meta">
+                <span><i class="fa fa-calendar-o"></i> ${b.date}</span>
+                <span><i class="fa fa-folder-o"></i> ${b.category}</span>
+              </div>
+              <h5><a href="blog-details.html?id=${b.id}">${b.title}</a></h5>
+              <p>${b.summary}</p>
+              <a href="blog-details.html?id=${b.id}" class="blog__item-btn">
+                Đọc Thêm <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          `;
+          blogContainer.appendChild(card);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng Của Bạn - Squishy World</title>
+  <!-- Google Font: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== MOBILE MENU ==================== -->
+  <div class="humberger__menu__overlay"></div>
+  <div class="humberger__menu__wrapper">
+    <div class="humberger__menu__close">
+      <i class="fa fa-times"></i>
+    </div>
+    <div class="humberger__menu__logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Squishy World Logo">
+      </a>
+    </div>
+    <nav class="humberger__menu__nav">
+      <ul>
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="shop.html">Cửa Hàng Squishy</a></li>
+        <li><a href="shop.html?filter=hot">Bộ Sưu Tập</a></li>
+        <li><a href="blog.html">Tin Tức</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <div class="header__top-left">
+            <span><i class="fa fa-envelope"></i> contact@squishyworld.vn</span>
+            <span><i class="fa fa-truck"></i> Giao hàng tận nơi toàn quốc (Mô phỏng đồ án)</span>
+          </div>
+          <div class="header__top-right">
+            <div class="header__top-social">
+              <a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+              <a href="javascript:void(0)"><i class="fa fa-instagram"></i></a>
+              <a href="javascript:void(0)"><i class="fa fa-pinterest-p"></i></a>
+            </div>
+            <div class="header__top-auth">
+              <i class="fa fa-user"></i>
+              <span>Tài khoản (Demo)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Squishy World Logo">
+          </a>
+        </div>
+
+        <nav class="header__menu">
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="shop.html">Cửa Hàng Squishy</a></li>
+            <li><a href="shop.html?category=banh-ngot">Bánh Ngọt</a></li>
+            <li><a href="shop.html?category=dong-vat">Động Vật</a></li>
+            <li><a href="blog.html">Tin Tức</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__cart">
+          <ul>
+            <li>
+              <a href="shop.html?filter=wishlist" title="Danh sách yêu thích">
+                <i class="fa fa-heart"></i>
+                <span class="badge" id="wishlist-badge">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="shopping-cart.html" title="Giỏ hàng">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="badge" id="cart-badge">0</span>
+              </a>
+            </li>
+          </ul>
+          <div class="header__cart-price">
+            Tổng: <span id="cart-header-price">0đ</span>
+          </div>
+        </div>
+
+        <div class="humberger__open">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <section class="breadcrumb-section">
+    <div class="container">
+      <div class="breadcrumb__text">
+        <h2>Giỏ Hàng Của Bạn</h2>
+        <div class="breadcrumb__option">
+          <a href="index.html">Trang Chủ</a>
+          <span>/</span>
+          <span>Giỏ Hàng</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CART MAIN SECTION ==================== -->
+  <section class="shoping-cart spad">
+    <div class="container">
+
+      <!-- View 1: Giỏ hàng trống -->
+      <div id="empty-cart-view" class="empty-state" style="display: none; max-width: 650px; margin: 40px auto;">
+        <div class="empty-state-icon">🛒</div>
+        <h4>Giỏ hàng của bạn đang trống!</h4>
+        <p>Có vẻ như bạn chưa chọn được chú Squishy đáng yêu nào. Hãy ghé thăm cửa hàng để chọn ngay những người bạn mềm mại nhé!</p>
+        <a href="shop.html" class="primary-btn">
+          <i class="fa fa-shopping-bag"></i> KHÁM PHÁ CỬA HÀNG NGAY
+        </a>
+      </div>
+
+      <!-- View 2: Giỏ hàng có sản phẩm -->
+      <div id="cart-content-view">
+        <!-- Bảng danh sách giỏ hàng -->
+        <div class="cart__table-wrap">
+          <table class="cart__table">
+            <thead>
+              <tr>
+                <th style="width: 45%;">Sản phẩm</th>
+                <th style="width: 15%;">Đơn giá</th>
+                <th style="width: 18%;">Số lượng</th>
+                <th style="width: 15%;">Thành tiền</th>
+                <th style="width: 7%;">Xóa</th>
+              </tr>
+            </thead>
+            <tbody id="cart-table-body">
+              <!-- Render dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Các nút hành động dưới bảng -->
+        <div class="cart__actions">
+          <a href="shop.html" class="outline-btn">
+            <i class="fa fa-arrow-left"></i> TIẾP TỤC MUA SẮM
+          </a>
+          <button type="button" id="btn-clear-cart" class="outline-btn" style="border-color: var(--color-danger); color: var(--color-danger);">
+            <i class="fa fa-trash-o"></i> XÓA TOÀN BỘ GIỎ HÀNG
+          </button>
+        </div>
+
+        <!-- Khung mã giảm giá & Khung tổng tiền (Bố cục Organi) -->
+        <div class="cart__summary-grid">
+          <!-- Discount Box -->
+          <div class="discount__content">
+            <h5>Mã Giảm Giá Ưu Đãi</h5>
+            <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 12px;">
+              Nhập mã <strong>SQUISHY10</strong> (giảm 10%) hoặc <strong>FREESHIP</strong> để nhận ưu đãi mô phỏng.
+            </p>
+            <form id="coupon-form" class="discount__form">
+              <input type="text" id="coupon-input" placeholder="Nhập mã giảm giá..." required>
+              <button type="submit">ÁP DỤNG</button>
+            </form>
+          </div>
+
+          <!-- Total Card -->
+          <div class="cart__total-card">
+            <h5>Tổng Cộng Giỏ Hàng</h5>
+            <ul>
+              <li>Tạm tính: <span id="cart-subtotal">0đ</span></li>
+              <li>Giảm giá: <span id="cart-discount" style="color: var(--color-success); font-weight: 700;">0đ</span></li>
+              <li>Phí vận chuyển: <span id="cart-shipping">Miễn phí</span></li>
+              <li class="total-highlight">Tổng thanh toán: <span id="cart-final-total">0đ</span></li>
+            </ul>
+            <a href="checkout.html" class="primary-btn">
+              <span>TIẾN HÀNH THANH TOÁN</span>
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <div class="footer__about-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Squishy World Logo">
+            </a>
+          </div>
+          <p>Squishy World mang đến cho bạn thế giới đồ chơi Squishy xốp mềm ngọt ngào, chất lượng cao cấp, an toàn và giúp giải tỏa căng thẳng sau những giờ học tập mệt mỏi.</p>
+          <ul>
+            <li><i class="fa fa-map-marker"></i> Địa chỉ: Khu Đô Thị Đại Học, TP. Hồ Chí Minh</li>
+            <li><i class="fa fa-phone"></i> Điện thoại: 0988 123 456</li>
+            <li><i class="fa fa-envelope"></i> Email: contact@squishyworld.vn</li>
+          </ul>
+        </div>
+
+        <div class="footer__widget">
+          <h6>Liên Kết Nhanh</h6>
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="shop.html">Cửa Hàng Squishy</a></li>
+            <li><a href="shopping-cart.html">Giỏ Hàng Của Bạn</a></li>
+            <li><a href="checkout.html">Thanh Toán (Demo)</a></li>
+            <li><a href="blog.html">Cẩm Nang Squishy</a></li>
+            <li><a href="contact.html">Liên Hệ Hỗ Trợ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__widget">
+          <h6>Danh Mục Squishy</h6>
+          <ul>
+            <li><a href="shop.html?category=banh-ngot">Squishy Bánh Ngọt</a></li>
+            <li><a href="shop.html?category=dong-vat">Squishy Động Vật</a></li>
+            <li><a href="shop.html?category=trai-cay">Squishy Trái Cây</a></li>
+            <li><a href="shop.html?category=do-an">Squishy Đồ Ăn Mini</a></li>
+            <li><a href="shop.html?category=cham-no">Squishy Chậm Nở</a></li>
+            <li><a href="shop.html?category=hop-qua">Hộp Quà Cao Cấp</a></li>
+            <li><a href="shop.html?category=khac">Squishy Khác</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__widget footer__newsletter">
+          <h6>Đăng Ký Nhận Tin</h6>
+          <p>Nhận ngay thông báo khi có các mẫu Squishy mới về hoặc mã ưu đãi đặc biệt.</p>
+          <form class="footer__newsletter-form" onsubmit="event.preventDefault(); showToast('Đăng ký thành công', 'Cảm ơn bạn đã theo dõi Squishy World!', 'success'); this.reset();">
+            <input type="email" placeholder="Nhập email của bạn..." required>
+            <button type="submit">GỬI</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 <strong>Squishy World</strong>. Bố cục tham khảo thiết kế từ mẫu giao diện Organi (Ogani Template).</p>
+        <span class="disclaimer">Website được xây dựng phục vụ đồ án môn Thiết kế Web - Dữ liệu giá bán, đánh giá và giao dịch trên website hoàn toàn là mô phỏng.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

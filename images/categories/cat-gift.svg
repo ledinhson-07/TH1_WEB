@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <defs>
+    <linearGradient id="gradPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5" />
+      <stop offset="100%" stop-color="#F8C8DC" />
+    </linearGradient>
+    <linearGradient id="gradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E8FF" />
+      <stop offset="100%" stop-color="#DCCBFA" />
+    </linearGradient>
+    <linearGradient id="gradPeach" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F2" />
+      <stop offset="100%" stop-color="#FFE0D0" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#493B43" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFF8F2" rx="16"/>
+  
+  <g transform="translate(100, 70)" filter="url(#softShadow)">
+    <!-- box base -->
+    <rect x="30" y="80" width="140" height="120" rx="10" fill="#DCCBFA"/>
+    <!-- lid -->
+    <rect x="20" y="65" width="160" height="30" rx="6" fill="#C4B5FD"/>
+    <!-- ribbons -->
+    <rect x="90" y="65" width="20" height="135" fill="#F06292"/>
+    <rect x="20" y="125" width="160" height="20" fill="#F06292"/>
+    <!-- ribbon bow on top -->
+    <path d="M 100,65 C 60,35 60,5 95,50 Z" fill="#F06292"/>
+    <path d="M 100,65 C 140,35 140,5 105,50 Z" fill="#F06292"/>
+    <circle cx="100" cy="62" r="10" fill="#E11D48"/>
+    <!-- sparkles -->
+    <polygon points="40,40 43,47 50,50 43,53 40,60 37,53 30,50 37,47" fill="#FDE047"/>
+    <polygon points="160,40 163,47 170,50 163,53 160,60 157,53 150,50 157,47" fill="#FDE047"/>
+  </g>
+
+</svg>
